@@ -1,13 +1,20 @@
 <template lang="pug">
 #v-app: .container
-  | App
+  v-login
 </template>
 
 <script>
+import VLogin from './components/Login.vue';
+
 export default {
   name: 'App',
+  components: {
+    VLogin
+  },
   created() {
-}
+    console.log(window.FB.getLoginStatus());
+  }
+};
 </script>
 
 <style lang="sass" scoped>
